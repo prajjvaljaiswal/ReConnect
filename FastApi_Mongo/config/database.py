@@ -1,6 +1,10 @@
 from pymongo import MongoClient
+import os
+from dotenv import load_dotenv
 
-client = MongoClient("mongodb+srv://prajjaiswal158:9967138778@cluster0.9h3bd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+load_dotenv()
+client = MongoClient(os.getenv("MONGO_URI"))
+print("Connected to MongoDB")
 
 db = client.users
 

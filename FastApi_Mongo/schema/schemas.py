@@ -4,6 +4,7 @@ def individual_serial(user) -> dict:
         "name": user["name"],
         "age": user["age"],
         "email": user["email"],
+        "password": user["password"]
     }
 
 def list_serial(users) -> list:
